@@ -1,9 +1,9 @@
 {
-  "name": "gulp-elementary",
+  "name": "second-test-project",
   "version": "1.0.0",
   "description": "Simple gulp application",
   "main": "gulpfile.js",
-  "author": "ducker-dev <the.ivan.smirnov@gmail.com>",
+  "author": "Ekaterina Ignatova <ieu.tlt@mail.ru>",
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.26.5",
