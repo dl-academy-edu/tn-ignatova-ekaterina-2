@@ -1,24 +1,81 @@
-header {
-  background-color: #89f7fe;
-  height: 80px;
-  display: flex;
+.header {
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
   align-items: center;
-
-  span {
-    padding-right: 20px;
-  }
-
-  a {
-    color: #000;
-    text-decoration: none;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
 }
 
+.header-logo:hover {
+  opacity: .5;     
+}
 
+.header-logo:active {
+  opacity: .2;
+}                                   
+
+.header-nav {
+  margin: 0 auto 0 60px;
+}
+
+.header-list {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-align-items: center;
+      -moz-align-items: center;
+          align-items: center;   
+}
+
+.header-item {
+  margin-right: 20px; 
+}
+
+.header-item:hover {
+  opacity: .5;
+  background: none;
+}
+
+.header-item:active {
+  opacity: .2;
+}
+
+.header-search {
+  margin-right: 20px; 
+}
+
+.header-search:hover {
+  opacity: .5;
+  background: none;
+}
+
+.header-search:active {
+  opacity: .2;
+  background: none;
+}
+
+.header-contacts {
+  font-weight: bold;
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-align-items: center;
+      -moz-align-items: center;
+          align-items: center;
+  text-transform: uppercase;    
+  color: #1E0606;
+}
+
+.header-contacts:hover {
+  opacity: .5;    
+}
+
+.header-contacts:active {
+  opacity: .2;    
+}

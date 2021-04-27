@@ -1,0 +1,36 @@
+.breadcrumbs {
+    margin-left: 0 auto;
+    margin-bottom: 50px;  
+    list-style-type: none;
+    font-family:"Crimson Text", Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1E0606;    
+}
+
+.breadcrumbs-list {
+    padding-left: 0;
+}
+
+.breadcrumbs-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+}
+  
+.breadcrumbs-item:not(:last-child):after {
+    content: ">";
+    margin-left: 5px;
+}
+  
+.breadcrumbs-link {
+    color: #1E0606;  
+    text-decoration: none;
+}
+  
+.breadcrumbs-link.current {
+    color: #1E0606;
+    opacity: 0.5;
+}

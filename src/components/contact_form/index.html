@@ -1,0 +1,31 @@
+<form action="#" method="POST" class="contact-form">
+            <fieldset class="contact-container">
+                <div class="form-name" tabindex="0">
+                    <label for="form-name" class="form-label" tabindex="0">Name</label>
+                    <input class="form-name form-input" id="form-name" type="text" name="name" placeholder="Ivan Ivanov">                    
+                </div>
+            </fieldset>
+            <fieldset class="contact-wrapper">
+                <div class="contact-wrapper contact-block" tabindex="0">  
+                    <label for="form-phone" class="form-label">Phone</label>                  
+                    <input id="form-phone" type="tel" name="phone" class="form-input" pattern="+7 (908) 296-13-78">                   
+                </div>
+                <div class="contact-wrapper contact-block" tabindex="0">   
+                    <label for="form-email" class="form-label">Email</label>                 
+                    <input id="form-email" type="text" name="email" class="form-input">                    
+                </div>
+            </fieldset>
+            <fieldset class="contact-wrapper">
+                <div tabindex="0">
+                    <label for="form-message" class="form-label">Message</label>                    
+                    <textarea id="form-message" name="message" class="form-textarea" cols="30" rows="5"></textarea>                    
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="checkbox-agreement" tabindex="0">
+                    <input class="input"  id="form-agreement" type="checkbox" name="agreement">
+                    <label  for="form-agreement" class="checkbox-label"><span>By clicking on the button, you consent to the processing of your personal data</span></label>
+                </div>
+            </fieldset>
+            <button class="button" type="submit">Submit</button>
+        </form>

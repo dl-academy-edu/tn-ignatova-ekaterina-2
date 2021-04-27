@@ -1,0 +1,56 @@
+.blog-title {
+    margin-bottom: -2px;
+}
+
+.posts {
+    margin-bottom: 52px; 
+}
+
+.posts-list {
+    -webkit-display: flex;
+        -moz-display: flex;
+            display: flex;
+    -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+            justify-content: space-between;    
+    -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+            flex-wrap: wrap;        
+    margin: 0 -10px -20px;
+}
+
+.posts-item {
+    max-width: 380px;
+    margin-bottom: 15px;
+    margin-left: 8px;
+    overflow: hidden;    
+}
+
+.posts-date {
+    color: #818181;
+    margin-bottom: -13px;
+}
+
+.posts-title {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;    
+    color: #1E0606;
+}
+
+.posts-title:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.posts-title:active {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.posts-info {
+    font-size: 18px;
+    line-height: 25px;
+}
