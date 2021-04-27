@@ -26,6 +26,9 @@
                     <input class="input"  id="form-agreement" type="checkbox" name="agreement">
                     <label  for="form-agreement" class="checkbox-label"><span>By clicking on the button, you consent to the processing of your personal data</span></label>
                 </div>
-            </fieldset>
-            <button class="button" type="submit">Submit</button>
+            </fieldset>           
+            @@include('button/index.html', {
+                "text": "Submit",
+                "type": "submit"
+              })
         </form>
