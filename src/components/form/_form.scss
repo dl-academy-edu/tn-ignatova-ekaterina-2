@@ -1,0 +1,136 @@
+.contact-form {
+    max-width: 680px;
+    width: 100%;
+    background: #E5EAF8;
+    margin: 0 auto 60px;
+    padding: 42px 40px;
+}
+
+.contact-form fieldset{
+    border: none;
+    -webkit-display: flex;
+        -moz-display: flex;
+            display: flex;
+    max-width: 0%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;    
+}
+
+.contact-form label {
+    font-size: 14px;
+    line-height: 19px;
+    color: #1E0606;
+    margin-bottom: 3px;
+}
+
+.contact-wrapper {
+    -webkit-display: flex;
+        -moz-display: flex;
+            display: flex;  
+}
+
+div .form-name {    
+    width: 600px;
+    bottom: 50px;
+}
+
+.contact-block {
+    -webkit-flex-direction: column; 
+        -moz-flex-direction: column;  
+            flex-direction: column;
+    width: 290px;
+    margin-right: 20px;
+}
+
+.contact-wrapper:focus-within label {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.contact-container:focus-within label {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input,
+.contact-form textarea {
+    height: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 12px 20px;
+    font-size: 18px;
+    line-height: 25px;        
+}  
+
+.contact-form textarea {
+    width: 600px;
+    height: auto;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.contact-form input::placeholder {
+    color: #1E0606;
+}
+
+.checkbox-agreement {
+    width: 542px;        
+}
+
+.checkbox-agreement label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;       
+}   
+
+.input {
+    display: none;
+}
+
+.checkbox-agreement label:before,
+.checkbox-agreement label:after {
+    content: "";
+    position: absolute;
+    display: block;    
+}
+
+.checkbox-agreement label:before {
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;    
+    border: 2px solid #C29974;   
+    border-radius: 20%; 
+}
+
+.checkbox-agreement label:after {
+    content: " ";          
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 13px;
+    height: 13px;
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+}   
+
+.input:checked + label:after {
+    opacity: 1;
+}
+
+.input:checked:hover + label:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.input:disabled + label {
+    opacity: .7;
+}
+
+.checkbox-label {
+   outline: none; 
+}

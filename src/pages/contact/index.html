@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->    
+    <link rel="stylesheet" href="contact.css">
+    <link href="/common.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+<body>
+    @@include('header/index.html')
+    <main class="container">
+        <h1 class="page-title contact-title">Contact Us</h1>
+        @@include('breadcrumbs/index.html')
+        <section class="contacts-box">
+            <h2 class="hidden">Contacts</h2>
+            @@include('form/index.html')                   
+            <div class="support" tabindex="0">
+                <p>Our support team are on-hand to assist with any issues you are experiencing.</p>
+                <p>Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+                <p class="support-item">An expert is waiting to help you!</p>
+            </div>
+    </section>
+    </main>
+    @@include('footer/index.html')
+</body>
+</html>
