@@ -2,80 +2,57 @@
   padding-top: 0%;
   padding-bottom: 0%;
   margin-top: 50px;
-  margin-bottom: 60px;
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
+  margin-bottom: 60px;  
+  display: flex;
   align-items: center;
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
-}
-
-.header-logo:hover {
-  opacity: .5;     
-}
-
-.header-logo:active {
-  opacity: .2;
-}                                   
-
-.header-nav {
-  margin: 0 auto 0 60px;
-}
-
-.header-list {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-align-items: center;
-      -moz-align-items: center;
-          align-items: center;   
-}
-
-.header-item {
-  margin-right: 20px; 
-}
-
-.header-item:hover {
-  opacity: .5;
-  background: none;
-}
-
-.header-item:active {
-  opacity: .2;
-}
-
-.header-search {
-  margin-right: 20px; 
-}
-
-.header-search:hover {
-  opacity: .5;
-  background: none;
-}
-
-.header-search:active {
-  opacity: .2;
-  background: none;
-}
-
-.header-contacts {
-  font-weight: bold;
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-align-items: center;
-      -moz-align-items: center;
-          align-items: center;
-  text-transform: uppercase;    
-  color: #1E0606;
-}
-
-.header-contacts:hover {
-  opacity: .5;    
-}
-
-.header-contacts:active {
-  opacity: .2;    
-}
+  &__logo:hover {
+    opacity: .5;     
+  }
+  &__logo:active {
+    opacity: .2;
+  }    
+  &__nav {
+    margin: 0 auto 0 60px;
+  }
+  &__list {    
+  display: flex;    
+  align-items: center;   
+  }
+  &__item {
+    margin-right: 20px; 
+  }
+  &__item:hover {
+    opacity: .5;
+    background: none;
+  }
+  &__item:active {
+    opacity: .2;
+  }
+  &__search {
+    margin-right: 20px; 
+  }
+  &__search:hover {
+    opacity: .5;
+    background: none;
+  }
+  &__search:active {
+    opacity: .2;
+    background: none;
+  }
+  &__contacts {
+    font-weight: bold;    
+    display: flex;    
+    align-items: center;
+    text-transform: uppercase;    
+    color: #1E0606;
+  }
+  &__contacts:hover {
+    opacity: .5;    
+  }
+  &__contacts:active {
+    opacity: .2;    
+  }
+}  
