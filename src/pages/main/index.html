@@ -13,153 +13,206 @@
 <body class="main-page">
     @@include('header/index.html')
     <main>
-        <section class="slider container">                   
+        <section class="slider-box container">                   
            <div class="slider-content" tabindex="0">             
-                <div class="toggle-content" tabindex="0">
-                    <div class="toggle-number">
+                <div class="toggle" tabindex="0">
+                    <div class="toggle__number">
                     <svg width="51" height="44" viewBox="0 0 51 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.74 43.3C13.54 43.3 10.68 42.44 8.16 40.72C5.68 38.96 3.74 36.48 2.34 33.28C0.98 30.08 0.3 26.32 0.3 22C0.3 17.68 0.98 13.92 2.34 10.72C3.74 7.52 5.68 5.06 8.16 3.34C10.68 1.58 13.54 0.699997 16.74 0.699997C19.94 0.699997 22.78 1.58 25.26 3.34C27.78 5.06 29.72 7.52 31.08 10.72C32.48 13.92 33.18 17.68 33.18 22C33.18 26.32 32.48 30.08 31.08 33.28C29.72 36.48 27.78 38.96 25.26 40.72C22.78 42.44 19.94 43.3 16.74 43.3ZM16.74 40.48C19.38 40.48 21.7 39.76 23.7 38.32C25.74 36.84 27.32 34.72 28.44 31.96C29.56 29.16 30.12 25.84 30.12 22C30.12 18.16 29.56 14.86 28.44 12.1C27.32 9.3 25.74 7.18 23.7 5.74C21.7 4.26 19.38 3.52 16.74 3.52C14.1 3.52 11.76 4.26 9.72 5.74C7.72 7.18 6.16 9.3 5.04 12.1C3.92 14.86 3.36 18.16 3.36 22C3.36 25.84 3.92 29.16 5.04 31.96C6.16 34.72 7.72 36.84 9.72 38.32C11.76 39.76 14.1 40.48 16.74 40.48ZM50.2936 0.999997V43H47.2336V3.76H36.9736V0.999997H50.2936Z" fill="#1E0606" fill-opacity="0.05"/>
                         </svg>
                     </div>  
-                 <ul class="toggle-list">
-                    <li class="toggle-item"> 
+                 <ul class="toggle__list">
+                    <li class="toggle__item"> 
                         <svg width="31" height="3" viewBox="0 0 31 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="30.9994" height="3" fill="#1E0606" fill-opacity="0.6"/>
                             </svg>
                      </li>
-                     <li class="toggle-item">
+                     <li class="toggle__item">
                         <svg width="31" height="3" viewBox="0 0 31 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="30.9994" height="3" fill="#D6CAC2"/>
                             </svg>
                      </li>
-                     <li class="toggle-item">
+                     <li class="toggle__item">
                         <svg width="31" height="3" viewBox="0 0 31 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="30.9994" height="3" fill="#D6CAC2"/>
                             </svg>
                      </li>
-                     <li class="toggle-item">
+                     <li class="toggle__item">
                         <svg width="31" height="3" viewBox="0 0 31 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="30.9994" height="3" fill="#D6CAC2"/>
                             </svg>
                      </li>
                  </ul>
              </div>                     
-            <div class="slider-first-block" tabindex="0">  
-                <h1 class="page-title slider-title">THE OOH NOO COLLECTION</h1>
-                <p class="slider-item">Designed in Slovenia</p>
+            <div class="slider" tabindex="0">  
+                <h1 class="page-title slider__title">THE OOH NOO COLLECTION</h1>
+                <p class="slider__item">Designed in Slovenia</p>
                 @@include('button/index.html', {
                   "text": "EXPLORE NOW",
-                  "class": "slider-btn slider-js"
+                  "class": "slider__btn slider__js"
                 })
             </div>   
-                <img class="slider-img" src="../../static/images/slider1.png" alt="">
+                <img class="slider__img" src="../../static/images/slider1.png" alt="">
             </div>
-            <p class="slider-info">Free (continental) USA shipping on all orders of $100 USD or more!
+            <p class="slider__info">Free (continental) USA shipping on all orders of $100 USD or more!
             </p>                                 
         </section>
         <section class="products container">
-                <h2 class="page-title-two products-title">Category Products</h2>
-                <ul class="outline products-list">
-                <li class="products-item">      
-                    <div class="container-link" tabindex="0">
+                <h2 class="page-title-two products__title">Category Products</h2>
+                <ul class="outline products__list">             
+                    <!-- <li class="products__item">      
+                        <div class="products__container-link" tabindex="0">
+                            <a href="#">
+                            <img class="products__img-one" src= "../../static/images/prod1.jpg" alt="" width="280" height="270">
+                            <p class="products__title-link">APPAREL KIDS</p>
+                            </a>
+                        </div>
+                    </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-one",
+                        "@@img": "../../static/images/prod1.jpg",
+                        "@@alt": " ",
+                        "@@title": "APPAREL KIDS"                    
+                      })
+                    <!-- <li class="products__item">
+                    <div class="products__container-link" tabindex="0"> 
                         <a href="#">
-                        <img class="products-img-one" src= "../../static/images/prod1.jpg" alt="" width="280" height="270">
-                        <p class="title-link">APPAREL KIDS</p>
+                            <img class="products__img-two" src="../../static/images/prod2.jpg" alt="" width="280" height="270">
+                            <p class="products__title-link">HOLIDAY SHOP</p>
+                        </a>
+                        </div>
+                    </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-two",
+                        "@@img": "../../static/images/prod2.jpg",
+                        "@@alt": " ",
+                        "@@title": "HOLIDAY SHOP"                    
+                      })
+                    <!-- <li class="products__item">
+                        <div class="products__container-link" tabindex="0">
+                        <a href="pages/toys">
+                            <img class="products__img-three" src="../../static/images/prod3.jpg" alt="" width="280" height="270">
+                            <p class="products__title-link">TOYS</p>
+                        </a>
+                        </div>
+                    </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-three",
+                        "@@img": "../../static/images/prod3.jpg",
+                        "@@alt": " ",
+                        "@@title": "TOYS"                    
+                      })
+                    <!-- <li class="products__item">
+                        <div class="products__container-link" tabindex="0">
+                        <a href="#">
+                            <img class="products__img-four" src="../../static/images/prod4.jpg" alt="" width="280" height="270">
+                            <p class="products__title-link">ACCESSORIES</p>
                         </a>
                     </div>
-                </li>
-                <li class="products-item">
-                <div class="container-link" tabindex="0"> 
-                    <a href="#">
-                        <img class="products-img-two" src="../../static/images/prod2.jpg" alt="" width="280" height="270">
-                        <p class="title-link">HOLIDAY SHOP</p>
-                    </a>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <div class="container-link" tabindex="0">
-                    <a href="pages/toys">
-                        <img class="products-img-three" src="../../static/images/prod3.jpg" alt="" width="280" height="270">
-                        <p class="title-link">TOYS</p>
-                    </a>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <div class="container-link" tabindex="0">
-                    <a href="#">
-                        <img class="products-img-four" src="../../static/images/prod4.jpg" alt="" width="280" height="270">
-                        <p class="title-link">ACCESSORIES</p>
-                    </a>
-                </div>
-                </li>
+                    </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-four",
+                        "@@img": "../../static/images/prod4.jpg",
+                        "@@alt": " ",
+                        "@@title": "ACCESSORIES"                    
+                      })    
             </ul>
             <div class="products-info" tabindex="0">
-                <button class="btn-control">  
+                <button class="products-info__btn">  
                     <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="37" height="37" fill="#70BBDC" fill-opacity="0.2"/>
                         <path d="M25 5L12 18L25 31" stroke="#1E0606" stroke-width="4"/>
                         </svg>                                         
                 </button>
-                <button class="btn-control"> 
+                <button class="products-info__btn"> 
                     <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="37" height="37" fill="#70BBDC" fill-opacity="0.2"/>
                         <path d="M12 5L25 18L12 31" stroke="#1E0606" stroke-width="4"/>
                         </svg>                                      
                 </button>                
             <div tabindex="0">
-                <p class="info_item">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
+                <p class="products-info__item">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
             </div>
         </div>   
         </section>          
         <section class="delivery container">
-            <img class="delivery-img" src="../../static/images/delivery.jpg" alt="" width="480" height="559">
-            <div class="delivery-info" tabindex="0">
-                <h2 class=" page-title-two delivery-title">Delivery</h2>
-                <div class="delivery-tabs" tabindex="0">                    
-                        <p class="tabs-item checked">Delivery</p>                    
-                        <p class="tabs-item">Guarantee</p>                    
-                        <p class="tabs-item">Credit</p>
-                        <p class="tabs-item-content-one">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.
+            <img class="delivery__img" src="../../static/images/delivery.jpg" alt="" width="480" height="559">
+            <div class="delivery__info" tabindex="0">
+                <h2 class="page-title-two delivery__title">Delivery</h2>
+                <div class="delivery__tabs" tabindex="0">                    
+                        <p class="delivery__item delivery__item_checked">Delivery</p>                    
+                        <p class="delivery__item">Guarantee</p>                    
+                        <p class="delivery__item">Credit</p>
+                        <p class="delivery__content-one">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.
                         </p>
-                        <p class="tabs-item-content-two">What started as an outlet to deal  with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!                            
+                        <p class="delivery__content-two">What started as an outlet to deal  with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!                            
                         </p>                    
                 </div>                
                 @@include('button/index.html', {
                   "text": "LEARN MORE",
-                  "class": "delivery-btn"
+                  "class": "delivery__btn"
                 })
             </div>
         </section>
         <section class="brands container">
-            <h2 class="hidden">Brands</h2>
-            <ul class="outline brands-list">
-                <li class="brands-item"><img src="../../static/images/brand1.png" alt="" width="193" height="60"></li>
-                <li class="brands-item"><img src="../../static/images/brand2.png" alt="" width="179" height="61"></li>
-                <li class="brands-item"><img src="../../static/images/brand3.png" alt="" width="216" height="46"></li>
-                <li class="brands-item"><img src="../../static/images/brand4.png" alt="" width="211" height="40"></li>
+            <h2 class="brands__title hidden">Brands</h2>
+            <ul class="outline brands__list">
+                <!-- <li class="brands__item"><img src="../../static/images/brand1.png" alt="" width="193" height="60"></li>
+                <li class="brands__item"><img src="../../static/images/brand2.png" alt="" width="179" height="61"></li>
+                <li class="brands__item"><img src="../../static/images/brand3.png" alt="" width="216" height="46"></li>
+                <li class="brands__item"><img src="../../static/images/brand4.png" alt="" width="211" height="40"></li> -->
+                @@include('catalog-card/index.html', {
+                    "@@img": "../../static/images/brand1.png",
+                    "@@alt": " "                                       
+                  })
+                @@include('catalog-card/index.html', {
+                    "@@img": "../../static/images/brand2.png",
+                    "@@alt": " "                                       
+                  })
+                @@include('catalog-card/index.html', {
+                    "@@img": "../../static/images/brand3.png",
+                    "@@alt": " "                                       
+                  })
+                  @@include('catalog-card/index.html', {
+                    "@@img": "../../static/images/brand4.png",
+                    "@@alt": " "                                       
+                  })
             </ul>    
         </section>
         <section class="about container">
-            <div class="about-content" tabindex="0">
-                <h2 class="page-title-two about-title">Design Life Kids</h2>
-                <h3 class="about-title-second">About Us</h3>
-                <p class="about-item">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical. 
+            <div class="about__content" tabindex="0">
+                <h2 class="page-title-two about__title">Design Life Kids</h2>
+                <h3 class="about__subtitle">About Us</h3>
+                <p class="about__item">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical. 
                 </p>                
                 @@include('link/index.html', {
                   "text": "buy now",
-                  "class": "about-btn"
+                  "class": "about__btn"
                 })
-            </div>        
-        <div class="contacts-content" tabindex="0">
-                <h2 class="page-title-two contacts-title">Contacts</h2>
-                <p class="contacts-item">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.                     
-                </p>
-                <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae975d5d0230c97fc17fe4170bcd64da9bd5d640035324b55dcba715d358a7b22&amp;source=constructor" width="483" height="196"></iframe>
-        </div>
+            </div> 
+            <div class="contacts">
+                <div class="contacts__content" tabindex="0">
+                    <h2 class="page-title-two contacts__title">Contacts</h2>
+                    <p class="contacts__item">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.                     
+                    </p>
+                    <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae975d5d0230c97fc17fe4170bcd64da9bd5d640035324b55dcba715d358a7b22&amp;source=constructor" width="483" height="196"></iframe>
+            </div>
+            </div>          
     </section>
     </main>
     @@include('footer/index.html')
-    @@include('popup/index.html')
+    <div class="popup__overlay" tabindex="0"></div>
+    <div class="popup__form" tabindex="0">
+        <h2 class="hidden">Modal window</h2>
+        <button class="popup__close"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.21902 14.6113C1.70029 15.1295 0.893368 15.1295 0.374636 14.6113C0.11527 14.3522 -6.13512e-07 14.0355 -5.9841e-07 13.69C-5.83308e-07 13.3445 0.11527 13.0278 0.374636 12.7687L5.64841 7.5L0.374637 2.23127C0.115271 1.97215 -7.23629e-08 1.65547 -5.72611e-08 1.30998C-4.21593e-08 0.964491 0.115271 0.647806 0.374637 0.388689C0.893369 -0.129545 1.70029 -0.129545 2.21902 0.388689L7.4928 5.65738L12.7666 0.38869C13.2853 -0.129545 14.0922 -0.129545 14.611 0.38869C15.1297 0.906924 15.1297 1.71304 14.611 2.23127L9.33718 7.5L14.611 12.7687C15.1297 13.287 15.1297 14.0931 14.611 14.6113C14.0922 15.1295 13.2853 15.1295 12.7666 14.6113L7.4928 9.34258L2.21902 14.6113Z" fill="white"/>
+            </svg>
+        </button>
+    @@include('form/index.html')
     <script src="script.js"></script>
 </body>
 </html>

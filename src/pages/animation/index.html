@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> --> 
+    <link rel="stylesheet" href="/common.css">       
+    <link rel="stylesheet" href="style.css">        
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+<body>
+    @@include('header/index.html')
+    <main>
+        <h1 class="page-title container">Animation scene</h1>
+        @@include('breadcrumbs/index.html', {
+            "name-page": "Animation"           
+          })
+          <section class="animation container">
+            <h2 class="animation__title hidden">Animation</h2>
+            <div class="animation__scene">                 
+                <div class="animation__city">
+                    <img src="../../static/images/scene/Clouds and sun.png" alt="" class="animation__sky">
+                    <img src="../../static/images/scene/Others elements.png" alt="" class="animation__city">
+                    <img src="../../static/images/scene/Lanterns.png" alt="" class="animation__lantern-off">
+                    <img src="../../static/images/scene/Lantern.png" alt="" class="animation__lantern-off animation__lantern-off_two">
+                    <img src="../../static/images/scene/Car one.png" alt="" class="animation__car animation__car_one">
+                    <img src="../../static/images/scene/Car two.png" alt="" class="animation__car animation__car_two">
+                    <img src="../../static/images/scene/Car three.png" alt="" class="animation__car animation__car_three">
+                    <img src="../../static/images/scene/Car four.png" alt="" class="animation__car animation__car_four">
+                    <img src="../../static/images/scene/Car.png" alt="" class="animation__taxi">
+                    <img src="../../static/images/scene/Message.png" alt="" class="animation__taxi-message">
+                    <img src="../../static/images/scene/Lantern-on.png" alt="" class="animation__lantern-on">                
+                    <img src="../../static/images/scene/Hand-man.png" alt="" class="animation__man-hand">
+                    <img src="../../static/images/scene/Body-man.png" alt="" class="animation__man">
+                    <img src="../../static/images/scene/Message-man.png" alt="" class="animation__man-message">
+                    <img src="../../static/images/scene/Body-woman.png" alt="" class="animation__woman">
+                    <img src="../../static/images/scene/Message-woman.png" alt="" class="animation__woman-message">
+                    <img src="../../static/images/scene/Hand-woman.png" alt="" class="animation__woman-hand">                
+                    <img src="../../static/images/scene/Suitcases.png" alt="" class="animation__suitcases">
+                </div>                
+            </div>            
+          </section>
+    </main>
+    @@include('footer/index.html')
+</body>
+</html>

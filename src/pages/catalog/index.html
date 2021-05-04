@@ -14,61 +14,114 @@
   @@include('header/index.html')
     <main class="container">
         <h1 class="page-title catalog-title">Category Products</h1>
-        @@include('breadcrumbs/index.html')
+        @@include('breadcrumbs/index.html', {
+            "name-page": "Catalog"           
+          })
         <section class="products">
-            <h2 class="hidden">Products</h2>
-            <ul class="outline products-list">                
-                <li class="products-item first-product">
-                    <div class="container-link" tabindex="0">
-                    <a href="#">
-                    <p class="title-link">APPAREL KIDS</p>
-                    </a>
-                </div>
-                </li>
-                <li class="products-item second-product">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">                           
-                        <p class="title-link">HOLIDAY SHOP</p>
+            <h2 class="products-title hidden">Products</h2>
+            <ul class="outline products__list"> 
+                 <!-- <li class="products__item">      
+                        <div class="products__container-link" tabindex="0">
+                            <a href="#">
+                            <img class="products__img-one" src= "../../static/images/prod1.jpg" alt="" width="280" height="270">
+                            <p class="products__title-link">APPAREL KIDS</p>
+                            </a>
+                        </div>
+                    </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-one",
+                        "@@img": "../../static/images/prod1.jpg",
+                        "@@alt": " ",
+                        "@@title": "APPAREL KIDS"                    
+                      })
+                    <!-- <li class="products__item">
+                    <div class="products__container-link" tabindex="0"> 
+                        <a href="#">
+                            <img class="products__img-two" src="../../static/images/prod2.jpg" alt="" width="280" height="270">
+                            <p class="products__title-link">HOLIDAY SHOP</p>
                         </a>
-                    </div>                    
-                </li>
-                <li class="products-item third-product">
-                    <div class="container-link" tabindex="0">
-                       <a href="#">                        
-                        <p class="title-link">TOYS</p>
-                        </a>  
-                    </div>
-                </li>
-                <li class="products-item fourth-product">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">                            
-                        <p class="title-link">ACCESSORIES</p>
+                        </div>
+                    </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-two",
+                        "@@img": "../../static/images/prod2.jpg",
+                        "@@alt": " ",
+                        "@@title": "HOLIDAY SHOP"                    
+                      })
+                    <!-- <li class="products__item">
+                        <div class="products__container-link" tabindex="0">
+                        <a href="pages/toys">
+                            <img class="products__img-three" src="../../static/images/prod3.jpg" alt="" width="280" height="270">
+                            <p class="products__title-link">TOYS</p>
+                        </a>
+                        </div>
+                    </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-three",
+                        "@@img": "../../static/images/prod3.jpg",
+                        "@@alt": " ",
+                        "@@title": "TOYS"                    
+                      })
+                    <!-- <li class="products__item">
+                        <div class="products__container-link" tabindex="0">
+                        <a href="#">
+                            <img class="products__img-four" src="../../static/images/prod4.jpg" alt="" width="280" height="270">
+                            <p class="products__title-link">ACCESSORIES</p>
                         </a>
                     </div>
-                </li>
-                <li class="products-item fifth-product">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">                            
-                        <p class="title-link">SALE</p>
-                        </a>
-                    </div>
-                </li>
-                <li class="products-item sixth-product">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">                        
-                        <p class="title-link">APPAREL ADULTS</p>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="description">
-            <h2 class="page-title-two description-title">Product Description</h2>
-            <p class="description-item">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
-            <p class="description-item">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
-            <p class="description-item">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
-        </section>
-    </main>
-    @@include('footer/index.html')
+                    </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-four",
+                        "@@img": "../../static/images/prod4.jpg",
+                        "@@alt": " ",
+                        "@@title": "ACCESSORIES"                    
+                      })             
+            <!-- <li class="products__item">
+                <div class="products__container-link" tabindex="0">
+                <a href="#">
+                    <img class="products__img-five" src="../../static/images/prod5.jpg" alt="" width="280" height="270">
+                    <p class="products__title-link">SALE</p>
+                </a>
+            </div>
+            </li> -->
+                    @@include('catalog-card/index.html', {
+                        "@@href": "#",
+                        "@@classImg": "products__img-five",
+                        "@@img": "../../static/images/prod5.jpg",
+                        "@@alt": " ",
+                        "@@title": "SALE"                    
+                    })         
+        <!-- <li class="products__item">
+            <div class="products__container-link" tabindex="0">
+            <a href="#">
+                <img class="products__img-six" src="../../static/images/prod6.jpg" alt="" width="280" height="270">
+                <p class="products__title-link">APPAREL ADULTS</p>
+            </a>
+        </div>
+        </li> -->
+        @@include('catalog-card/index.html', {
+            "@@href": "#",
+            "@@classImg": "products__img-six",
+            "@@img": "../../static/images/prod6.jpg",
+            "@@alt": " ",
+            "@@title": "APPAREL ADULTS"                    
+          })        
+    </ul>            
+    </section>
+    <section class="description">
+        <h2 class="page-title-two description__title">Product Description</h2>
+        <p class="description__item">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
+        <p class="description__item">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+        <p class="description__item">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+    </section>
+</main>
+@@include('footer/index.html')
 </body>
 </html>
+                
+                
+               

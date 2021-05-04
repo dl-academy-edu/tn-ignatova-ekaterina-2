@@ -1,0 +1,46 @@
+.svg {
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+
+    .eyebrown-one, .eyebrown-two,
+    .eye-one, .eye-two,
+    .eye-one-mini, .eye-two-mini {
+        transition: all .4s;
+    }
+
+    &:hover {
+        .eyebrown-one {
+            transform: translateY(-1px);
+        }
+
+        .eye-one,
+        .eye-two,
+        .eye-one-mini,
+        .eye-two-mini {
+            transform: translateY(2px);
+        }
+
+    }
+
+    &:active {
+        .eyebrown-one {
+            transform: translateY(0);
+        }
+
+        .eyebrown-two {
+            transform: translateY(-1px);
+        }
+
+        .eye-one,
+        .eye-two {
+            transform: translateY(-2px);
+        }
+        .eye-one-mini,
+        .eye-two-mini {
+            transform: translateY(-2px);
+        }
+    }
+    
+}

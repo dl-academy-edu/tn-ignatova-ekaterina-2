@@ -57,7 +57,7 @@ div .form-name {
     border: 2px solid rgba(0, 0, 0, 0.2);
     padding: 12px 20px;
     font-size: 18px;
-    line-height: 25px;        
+    line-height: 25px;           
 }  
 
 .contact-form textarea {
@@ -107,14 +107,15 @@ div .form-name {
 }
 
 .checkbox-agreement label:after {
-    content: " ";             
+    content: " "; 
+    background-image: url(../../static/images/Vector1.png);            
     background-size: 14px 14px;
     background-repeat: no-repeat;
     background-position: center;
     width: 13px;
     height: 13px;
-    top: 5px;
-    left: 5px;
+    top: 3px;
+    left: 4px;
     opacity: 0;
 }   
 
@@ -125,6 +126,7 @@ div .form-name {
 .input:checked:hover + label:hover {
     opacity: 1;
     text-decoration: underline;
+    transition: .4s;
 }
 
 .input:disabled + label {

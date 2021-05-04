@@ -1,0 +1,40 @@
+.posts {
+    &__list {    
+        display: flex;    
+        justify-content: space-between;    
+        flex-wrap: wrap;        
+        margin: 0 -10px -20px;
+    }    
+    &__item {
+        max-width: 380px;
+        margin-bottom: 15px;
+        margin-left: 8px;
+        overflow: hidden;    
+    }    
+    &__date {
+        color: #818181;
+        margin-bottom: -13px;
+    }    
+    &__subtitle {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 31px;    
+        color: #1E0606;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            transition: .4s;
+        }    
+        &:active {
+            text-decoration: underline;
+            cursor: pointer;
+            transition: .4s;
+        }    
+    }       
+    &__info {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
