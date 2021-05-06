@@ -59,66 +59,30 @@
         </section>
         <section class="products container">
                 <h2 class="page-title-two products__title">Category Products</h2>
-                <ul class="outline products__list">             
-                    <!-- <li class="products__item">      
-                        <div class="products__container-link" tabindex="0">
-                            <a href="#">
-                            <img class="products__img-one" src= "../../static/images/prod1.jpg" alt="" width="280" height="270">
-                            <p class="products__title-link">APPAREL KIDS</p>
-                            </a>
-                        </div>
-                    </li> -->
+                <ul class="outline products__list">                    
                     @@include('catalog-card/index.html', {
-                        "@@href": "#",
-                        "@@classImg": "products__img-one",
-                        "@@img": "../../static/images/prod1.jpg",
-                        "@@alt": " ",
-                        "@@title": "APPAREL KIDS"                    
-                      })
-                    <!-- <li class="products__item">
-                    <div class="products__container-link" tabindex="0"> 
-                        <a href="#">
-                            <img class="products__img-two" src="../../static/images/prod2.jpg" alt="" width="280" height="270">
-                            <p class="products__title-link">HOLIDAY SHOP</p>
-                        </a>
-                        </div>
-                    </li> -->
+                        "href": "#",                        
+                        "img": "../../static/images/prod1.jpg",
+                        "alt": " ",
+                        "title": "APPAREL KIDS"                    
+                      })                    
                     @@include('catalog-card/index.html', {
-                        "@@href": "#",
-                        "@@classImg": "products__img-two",
-                        "@@img": "../../static/images/prod2.jpg",
-                        "@@alt": " ",
-                        "@@title": "HOLIDAY SHOP"                    
-                      })
-                    <!-- <li class="products__item">
-                        <div class="products__container-link" tabindex="0">
-                        <a href="pages/toys">
-                            <img class="products__img-three" src="../../static/images/prod3.jpg" alt="" width="280" height="270">
-                            <p class="products__title-link">TOYS</p>
-                        </a>
-                        </div>
-                    </li> -->
+                        "href": "#",                        
+                        "img": "../../static/images/prod2.jpg",
+                        "alt": " ",
+                        "title": "HOLIDAY SHOP"                    
+                      })                    
                     @@include('catalog-card/index.html', {
-                        "@@href": "#",
-                        "@@classImg": "products__img-three",
-                        "@@img": "../../static/images/prod3.jpg",
-                        "@@alt": " ",
-                        "@@title": "TOYS"                    
-                      })
-                    <!-- <li class="products__item">
-                        <div class="products__container-link" tabindex="0">
-                        <a href="#">
-                            <img class="products__img-four" src="../../static/images/prod4.jpg" alt="" width="280" height="270">
-                            <p class="products__title-link">ACCESSORIES</p>
-                        </a>
-                    </div>
-                    </li> -->
+                        "href": "pages/toys",                        
+                        "img": "../../static/images/prod3.jpg",
+                        "alt": " ",
+                        "title": "TOYS"                    
+                      })                    
                     @@include('catalog-card/index.html', {
-                        "@@href": "#",
-                        "@@classImg": "products__img-four",
-                        "@@img": "../../static/images/prod4.jpg",
-                        "@@alt": " ",
-                        "@@title": "ACCESSORIES"                    
+                        "href": "#",                        
+                        "img": "../../static/images/prod4.jpg",
+                        "alt": " ",
+                        "title": "ACCESSORIES"                    
                       })    
             </ul>
             <div class="products-info" tabindex="0">
@@ -160,26 +124,22 @@
         </section>
         <section class="brands container">
             <h2 class="brands__title hidden">Brands</h2>
-            <ul class="outline brands__list">
-                <!-- <li class="brands__item"><img src="../../static/images/brand1.png" alt="" width="193" height="60"></li>
-                <li class="brands__item"><img src="../../static/images/brand2.png" alt="" width="179" height="61"></li>
-                <li class="brands__item"><img src="../../static/images/brand3.png" alt="" width="216" height="46"></li>
-                <li class="brands__item"><img src="../../static/images/brand4.png" alt="" width="211" height="40"></li> -->
-                @@include('catalog-card/index.html', {
-                    "@@img": "../../static/images/brand1.png",
-                    "@@alt": " "                                       
+            <ul class="outline brands__list">                
+                @@include('brands/index.html', {
+                    "img": "../../static/images/brand1.png",
+                    "alt": " "                                       
                   })
-                @@include('catalog-card/index.html', {
-                    "@@img": "../../static/images/brand2.png",
-                    "@@alt": " "                                       
+                @@include('brands/index.html', {
+                    "img": "../../static/images/brand2.png",
+                    "alt": " "                                       
                   })
-                @@include('catalog-card/index.html', {
-                    "@@img": "../../static/images/brand3.png",
-                    "@@alt": " "                                       
+                @@include('brands/index.html', {
+                    "img": "../../static/images/brand3.png",
+                    "alt": " "                                       
                   })
-                  @@include('catalog-card/index.html', {
-                    "@@img": "../../static/images/brand4.png",
-                    "@@alt": " "                                       
+                  @@include('brands/index.html', {
+                    "img": "../../static/images/brand4.png",
+                    "alt": " "                                       
                   })
             </ul>    
         </section>

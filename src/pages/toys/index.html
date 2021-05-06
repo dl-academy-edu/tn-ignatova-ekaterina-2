@@ -95,116 +95,50 @@
                             </div>  
                 </form>
         </section>
-        <section class="products container">
+        <section class="toys container">
             <h3 class="hidden">Toys</h3>
-            <ul class="outline products__list">
-                <!-- <li class="products__item">
-                    <div class="products__container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy1.jpg" alt="" width="380" height="385">
-                        </a>
-                        <a href="#">
-                            <p class="products__title-link">SHARKY BEAN BAG CHAIR COVER</p>
-                        </a>
-                        <p class="products__price-link">$60.00 USD</p>
-                    </div>
-                </li> -->
-                @@include('catalog-card/index.html', {
-                    "@@href": "#",                    
-                    "@@img": "../../static/images/toy1.jpg",
-                    "@@alt": "SHARKY BEAN BAG CHAIR COVER",
-                    "@@title": "SHARKY BEAN BAG CHAIR COVER", 
-                    "@@price": "$60.00 USD"                  
-                  }) 
-                <!-- <li class="products__item">
-                    <div class="products__container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy2.jpg" alt="" width="380" height="385">
-                        </a>
-                        <a href="#">
-                            <p class="products__title-link">BRASS DECO FRAMES</p>
-                        </a>
-                        <p class="products__price-link">$66.00 USD</p>
-                    </div>
-                </li> -->
-                @@include('catalog-card/index.html', {
-                    "@@href": "#",                    
-                    "@@img": "../../static/images/toy2.jpg",
-                    "@@alt": "BRASS DECO FRAMES",
-                    "@@title": "BRASS DECO FRAMES", 
-                    "@@price": "$66.00 USD"                  
-                  })
-                <!-- <li class="products__item">
-                    <div class="products__container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy3.jpg" alt="" width="380" height="385">
-                        </a>
-                        <a href="#">
-                            <p class="products__title-link">CIBO FULL APRON</p>
-                        </a>
-                        <p class="products__price-link">$60.00 USD</p>
-                    </div>
-                </li> -->
-                @@include('catalog-card/index.html', {
-                    "@@href": "#",                    
-                    "@@img": "../../static/images/toy3.jpg",
-                    "@@alt": "CIBO FULL APRON",
-                    "@@title": "CIBO FULL APRON", 
-                    "@@price": "$60.00 USD"                  
-                  })
-                <!-- <li class="products__item">
-                    <div class="products__container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy4.jpg" alt="" width="380" height="385">
-                        </a>
-                        <a href="#">
-                            <p class="products__title-link">GATCHA GATCHA GUMBALL MACHINE</p>
-                        </a>
-                        <p class="products__price-link">$56.00 USD</p>
-                    </div>
-                </li> -->
-                @@include('catalog-card/index.html', {
-                    "@@href": "#",                    
-                    "@@img": "../../static/images/toy4.jpg",
-                    "@@alt": "GATCHA GATCHA GUMBALL MACHINE",
-                    "@@title": "GATCHA GATCHA GUMBALL MACHINE", 
-                    "@@price": "$6.00 USD"                  
-                  })
-                <!-- <li class="products__item">
-                    <div class="products__container-link" tabindex="0">
-                        <a href="#">
-                        <img src="../../static/images/toy5.jpg" alt="" width="380" height="385">
-                    </a>
-                    <a href="#">
-                        <p class="products__title-link">CHRISTMAS ADVENT SCENTED CANDLE</p>
-                    </a>
-                    <p class="products__price-link">$29.00 USD</p>
-                    </div>
-                   </li> -->
-                   @@include('catalog-card/index.html', {
-                    "@@href": "#",                    
-                    "@@img": "../../static/images/toy5.jpg",
-                    "@@alt": "CHRISTMAS ADVENT SCENTED CANDLE",
-                    "@@title": "CHRISTMAS ADVENT SCENTED CANDLE", 
-                    "@@price": "$29.00 USD"                  
-                  })
-                <!-- <li class="products__item">
-                    <div class="products__container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy6.jpg" alt="" width="380" height="382">
-                        </a>
-                        <a href="#">
-                            <p class="products__title-link">TANGLE SPINNING TEA LIGHT</p>
-                        </a>
-                        <p class="products__price-link">$56.00 USD</p>
-                    </div>
-                </li> -->
-                @@include('catalog-card/index.html', {
-                    "@@href": "#",                    
-                    "@@img": "../../static/images/toy6.jpg",
-                    "@@alt": "TANGLE SPINNING TEA LIGHT",
-                    "@@title": "TANGLE SPINNING TEA LIGHT", 
-                    "@@price": "$56.00 USD"                  
+            <ul class="outline toys__list">                
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy1.jpg",
+                    "alt": "SHARKY BEAN BAG CHAIR COVER",
+                    "title": "SHARKY BEAN BAG CHAIR COVER", 
+                    "price": "$60.00 USD"                 
+                  })                 
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy2.jpg",
+                    "alt": "BRASS DECO FRAMES",
+                    "title": "BRASS DECO FRAMES", 
+                    "price": "$66.00 USD"                  
+                  })                
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy3.jpg",
+                    "alt": "CIBO FULL APRON",
+                    "title": "CIBO FULL APRON", 
+                    "price": "$60.00 USD"                  
+                  })                
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy4.jpg",
+                    "alt": "GATCHA GATCHA GUMBALL MACHINE",
+                    "title": "GATCHA GATCHA GUMBALL MACHINE", 
+                    "price": "$6.00 USD"                  
+                  })                
+                   @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy5.jpg",
+                    "alt": "CHRISTMAS ADVENT SCENTED CANDLE",
+                    "title": "CHRISTMAS ADVENT SCENTED CANDLE", 
+                    "price": "$29.00 USD"                  
+                  })                
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy6.jpg",
+                    "alt": "TANGLE SPINNING TEA LIGHT",
+                    "title": "TANGLE SPINNING TEA LIGHT", 
+                    "price": "$56.00 USD"                  
                   })
             </ul>
             @@include('pagination/index.html')

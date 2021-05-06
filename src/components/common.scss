@@ -18,7 +18,7 @@ body {
 a {
   text-decoration: none;
   color: #000;
-  transition: .4s;
+  transition: $transition-duration;
 }
 
 footer a {

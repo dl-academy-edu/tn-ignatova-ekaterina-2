@@ -1,3 +1,4 @@
+$transition-duration: .4s;
 
 .products {
   &__title {
@@ -18,19 +19,21 @@
   &__container-link {
     position: relative;
     text-align: center;    
-  }  
-  &__img-one {
-    background: #DBE4DB;
-  }  
-  &__img-two {
-    background: #EADDD3;
-  }  
-  &__img-three {
-    background: #F8F2DA;
-  }  
-  &__img-four {
-    background: #D5D4E1;
-  }  
+  }
+  &__img {
+    &:nth-child(1) {
+      background: #DBE4DB;
+    } 
+    &:nth-child(2) {
+      background: #EADDD3;
+    } 
+    &:nth-child(3) {
+      background: #F8F2DA;
+    }  
+    &:nth-child(4) {
+      background: #D5D4E1;
+    }      
+  }   
   &__title-link {
     position: absolute;
     top: 40%;
@@ -41,10 +44,10 @@
     font-size: 26px;
     line-height: 32px;
     text-align: center;
-    text-transform: uppercase;    
+    text-transform: uppercase;
+    transition: $transition-duration;     
   }  
   &__title-link:hover {
-    text-decoration: underline;
-    transition: .4s;           
+    text-decoration: underline;              
   }
 }

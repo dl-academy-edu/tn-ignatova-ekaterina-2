@@ -1,3 +1,4 @@
+$transition-duration: .4s;
 
 .footer-content  {
   padding-top: 87px;    
@@ -32,15 +33,16 @@
   &__item {
     margin-bottom: 15px;
   }
-  &__link:hover {
-    color: #A1A1A1;
-    background: none;
-    opacity: .5;
-    transition: .4s;
-  }
-  &__link:active {
-    color: #696969;
-    transition: .4s;
+  &__link {
+    transition: $transition-duration;    
+    &:hover {
+      color: #A1A1A1;
+      background: none;
+      opacity: .5;      
+    }
+    &:active {
+      color: #696969;       
+    }
   }
 }
 
@@ -66,13 +68,14 @@
     max-width: 300px;
     width: 100%;
     outline: none;
+    transition: $transition-duration;
+    cursor: pointer;
     &:hover {
       background: #666666;
       list-style-type: none;
       border-top: 1px solid #FFFDFD;
       border-bottom: 1px solid #FFFDFD;
-      border-left: 1px solid #FFFDFD;
-      transition: .4s;    
+      border-left: 1px solid #FFFDFD;         
     }
   }  
   &__btn {
@@ -84,9 +87,9 @@
     padding: 9px 22px;
     cursor: pointer;  
     outline:none;
+    transition: $transition-duration;
     &:focus {
-      background: #C29974;
-      transition: .4s;
+      background: #C29974;      
     }  
   }
 }
@@ -98,14 +101,15 @@
     margin-left: 0px;
     margin-right: 10px;
   }
-  &__link:hover {
-    opacity: .5;
+  &__link {
     background: none;
-    transition: .4s;
-  }
-  &__link:active {
-    opacity: .2;
-    transition: .4s;
+    transition: $transition-duration;
+    &:hover {
+      opacity: .5;            
+    }
+    &:active {
+      opacity: .2;      
+    }
   }
 }
 
@@ -122,14 +126,13 @@
   margin-left: 8px;
   margin-right: 25px;
   outline: none;
+  transition: $transition-duration;
   &:hover {
     color: #836E5B;
-    cursor: pointer;
-    transition: .4s;
+    cursor: pointer;    
   }  
   &:active {
-    color: #C29974;
-    transition: .4s;
+    color: #C29974;    
   }
 }
 
@@ -167,10 +170,10 @@
     cursor: pointer;
     color: #FFFFFF;
     outline: none;
+    transition: $transition-duration;
     &:before {
       content: '★';
-      display: block;
-      transition: .4s;          
+      display: block;                
     }
   }
 }   
@@ -195,11 +198,11 @@
   &__item {
     color: #A2A2A2;
     text-decoration: none;
+    transition: $transition-duration;
     &:hover {
       color:#FFFFFF;
       text-decoration: underline;
-      background: none;
-      transition: .4s;
+      background: none;      
     }
   }
 } 

@@ -1,3 +1,5 @@
+$transition-duration: .4s;
+
 .contact-form {
     max-width: 680px;
     width: 100%;
@@ -7,10 +9,8 @@
 }
 
 .contact-form fieldset{
-    border: none;
-    -webkit-display: flex;
-        -moz-display: flex;
-            display: flex;
+    border: none;    
+    display: flex;
     max-width: 0%;
     margin: 0;
     padding: 0;
@@ -22,12 +22,11 @@
     line-height: 19px;
     color: #1E0606;
     margin-bottom: 3px;
+    transition: $transition-duration;
 }
 
-.contact-wrapper {
-    -webkit-display: flex;
-        -moz-display: flex;
-            display: flex;  
+.contact-wrapper {    
+    display: flex;  
 }
 
 div .form-name {    
@@ -35,10 +34,8 @@ div .form-name {
     bottom: 50px;
 }
 
-.contact-block {
-    -webkit-flex-direction: column; 
-        -moz-flex-direction: column;  
-            flex-direction: column;
+.contact-block {     
+    flex-direction: column;
     width: 290px;
     margin-right: 20px;
 }
@@ -83,7 +80,8 @@ div .form-name {
 .checkbox-agreement label {
     position: relative;
     padding-left: 30px;
-    cursor: pointer;       
+    cursor: pointer;
+    transition: $transition-duration;       
 }   
 
 .input {
@@ -125,8 +123,7 @@ div .form-name {
 
 .input:checked:hover + label:hover {
     opacity: 1;
-    text-decoration: underline;
-    transition: .4s;
+    text-decoration: underline;    
 }
 
 .input:disabled + label {

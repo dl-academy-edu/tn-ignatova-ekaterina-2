@@ -58,7 +58,8 @@ $transition-duration: .4s;
 .radiobox label {
     position: relative;
     padding-left: 30px;
-    cursor: pointer;    
+    cursor: pointer;
+    transition: $transition-duration;    
 }
 
 .input,
@@ -103,8 +104,7 @@ $transition-duration: .4s;
 
 .input:checked:hover + label:hover {
     opacity: 1;
-    text-decoration: underline;
-    transition: .4s;
+    text-decoration: underline;    
 }
 
 .input:disabled + label {
@@ -136,8 +136,7 @@ $transition-duration: .4s;
 
 .radio:checked:hover + label:hover {
     opacity: 1;
-    text-decoration: underline;
-    transition: .4s;
+    text-decoration: underline;    
 }
 
 .radio:disabled + label {
@@ -160,19 +159,18 @@ $transition-duration: .4s;
 
 .form-radio-btn label {
 	display: inline-block;
-	cursor: pointer;
-    transition: background-color $transition-duration;
+	cursor: pointer;    
 	padding: 7px 19px;
 	font-size: 16px;
     line-height: 22px;
 	user-select: none;
-    background:#fff;       
+    background:#fff; 
+    transition: $transition-duration;      
 }
 
 .form-radio-btn input:hover + label {
 	background: #EDDEEB;
-    color: #877379;  
-    transition: .4s;    
+    color: #877379;         
 }
 
 .form-radio-btn input:checked + label {
@@ -184,6 +182,3 @@ $transition-duration: .4s;
     margin-top: 37px;
     width: 95px;
 } 
- 
-/* Products */
-
