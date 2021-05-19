@@ -1,17 +1,37 @@
 $transition-duration: .4s;
 
 .brands {
-    margin-bottom: 108px;   
+    margin-bottom: 108px;  
+    @media screen and (max-width: 767px) {
+      margin-bottom: 80px;  
+    }      
     &__list {    
-      display: flex;    
-      justify-content: space-between;    
-      margin-bottom: 90px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;       
+      margin-bottom: 90px; 
+      @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }     
     }  
-    &__item {
+    &__item { 
+      margin-right: 127px; 
+      width: 193px;    
       transition: $transition-duration;
-      &:hover {
+      @media screen and (max-width: 767px) {        
+        width: 149px;
+        height: 32px;   
+        margin-right: 0; 
+        margin-bottom: 20px;  
+        margin-bottom: 36px;       
+      }
+      &:hover {        
         opacity: .5;
         cursor: pointer;            
-      }     
+      }  
+      & img {
+        width: 100%;
+      }   
     } 
   }

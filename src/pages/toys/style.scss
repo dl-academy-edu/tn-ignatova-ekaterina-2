@@ -17,7 +17,10 @@ $transition-duration: .4s;
     width: 100%;
     padding-top: 42px;
     padding-left: 73px;
-    padding-bottom: 20px;    
+    padding-bottom: 20px; 
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }     
 }
 
 .filter-form fieldset {
@@ -30,6 +33,10 @@ $transition-duration: .4s;
     font-size: 16px;
     line-height: 22px;    
     color: #1E0606;
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 19px;
+    }
 }
 
 .box-range {
@@ -181,4 +188,7 @@ $transition-duration: .4s;
 .filter-item button {
     margin-top: 37px;
     width: 95px;
+    @media screen and (max-width: 768px) {
+        margin-right: 20px;
+    }
 } 

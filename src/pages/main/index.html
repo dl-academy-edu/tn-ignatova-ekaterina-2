@@ -5,7 +5,8 @@
     <title>Main page</title>
     <!-- <link rel="stylesheet" href="css/normalize.css"> --> 
     <link rel="stylesheet" href="/common.css">       
-    <link rel="stylesheet" href="style.css">        
+    <link rel="stylesheet" href="style.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
     <link rel="preconnect" href="https://fonts.gstatic.com">    
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/static/images/favicon.ico">
@@ -54,8 +55,9 @@
             </div>   
                 <img class="slider__img" src="../../static/images/slider1.png" alt="">
             </div>
-            <p class="slider__info">Free (continental) USA shipping on all orders of $100 USD or more!
-            </p>                                 
+            <div>
+                <p class="slider__info">Free (continental) USA shipping on all orders of $100 USD or more!</p>  
+            </div>                               
         </section>
         <section class="products container">
                 <h2 class="page-title-two products__title">Category Products</h2>
@@ -104,7 +106,14 @@
         </div>   
         </section>          
         <section class="delivery container">
-            <img class="delivery__img" src="../../static/images/delivery.jpg" alt="" width="480" height="559">
+            <div class="delivery__img-wrap">
+                <picture>
+                    <source srcset="../../static/images/delivery-mobile.jpg, ../../static/images/delivery-mobile@2x.jpg 2x" media="max-width:767px;">                    
+
+                    <source srcset="../../static/images/delivery.jpg, ../../static/images/delivery@2x.jpg 2x" media="min-width:1023px;">
+                    <img class="delivery__img"  src="../../static/images/delivery.jpg" alt="">
+                </picture>               
+            </div>            
             <div class="delivery__info" tabindex="0">
                 <h2 class="page-title-two delivery__title">Delivery</h2>
                 <div class="delivery__tabs" tabindex="0">                    
@@ -159,7 +168,7 @@
                     <h2 class="page-title-two contacts__title">Contacts</h2>
                     <p class="contacts__item">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.                     
                     </p>
-                    <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae975d5d0230c97fc17fe4170bcd64da9bd5d640035324b55dcba715d358a7b22&amp;source=constructor" width="483" height="196"></iframe>
+                    <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae975d5d0230c97fc17fe4170bcd64da9bd5d640035324b55dcba715d358a7b22&amp;source=constructor"></iframe>
             </div>
             </div>          
     </section>

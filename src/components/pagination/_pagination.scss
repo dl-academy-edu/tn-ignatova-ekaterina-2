@@ -4,17 +4,19 @@ $transition-duration: .4s;
     font-family: "Montserrat", Arial, sans-serif; ;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 25px;
     text-transform: uppercase;
     padding-top: 0%;
     padding-bottom: 0%;
     margin-top: 35px;     
     display: flex;    
-    align-items: center;
-    font-size: 14px;
-    line-height: 19px;    
+    align-items: center;       
     outline: none;
+    @media screen and (max-width: 767px) {          
+        font-size: 14px;
+        line-height: 17px;
+}
     &__nav {
         margin: 0 auto;
     }
@@ -37,3 +39,5 @@ $transition-duration: .4s;
         transition: $transition-duration;
     }
 }
+
+

@@ -6,13 +6,19 @@ $transition-duration: .4s;
         display: flex;    
         justify-content: space-between;    
         flex-wrap: wrap;
-        margin: 0 -10px -4px;                    
+        margin: 0 -10px -4px;  
+        @media screen and (max-width: 767px) {
+            margin: 0 -13px -7px;     
+          }                   
     }    
     &__item {
         width: 380px;
         margin-right: 20px;
         margin-bottom: 22px;
-        overflow: hidden;                                   
+        overflow: hidden;  
+        @media screen and (max-width: 767px) {
+            width: 160px;     
+          }                                 
     }    
     &__container-link {
         position: relative;        
@@ -69,7 +75,15 @@ $transition-duration: .4s;
         opacity: .7;
         cursor: pointer;         
         }  
-    }    
+    } 
+    &__container-img {
+        width: 380px;
+        height: 385px;
+        @media screen and (max-width: 767px) {
+            width: 159px;
+            height: 167px;     
+          } 
+    }   
     &__title-link {
         font-size: 14px;
         line-height: 19px;

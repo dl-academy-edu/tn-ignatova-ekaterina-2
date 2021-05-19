@@ -8,6 +8,9 @@ $transition-duration: .4s;
     display: flex;    
     justify-content: space-between;   
     margin: 0 -10px -20px;
+    @media screen and (max-width: 767px) {
+      width: 1050px;     
+    }
   } 
   &__item {
     width: 25%;
@@ -51,3 +54,4 @@ $transition-duration: .4s;
     text-decoration: underline;              
   }
 }
+
