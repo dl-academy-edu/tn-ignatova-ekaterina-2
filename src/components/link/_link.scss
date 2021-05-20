@@ -1,3 +1,5 @@
+$transition-duration: .4s;
+
 .button {
     background: black;
     color: #FFFFFF;
@@ -11,20 +13,22 @@
     border: none;
     text-transform: uppercase;
     display: block;
-    cursor: pointer;    
-}
-
-.button:hover, .button:focus {
-    background: #C29974;
-    outline:none;
-}
-
-.button:active {
-    background: #CFAF91;
-    outline:none;
-}
-
-.button:disabled {
-    background: #C1C1C1;
-    outline:none;
+    cursor: pointer;
+    $transition-duration: .4s;
+    &:hover {
+        background: #C29974;
+        outline:none;        
+    }
+    &:focus {
+        background: #C29974;
+        outline:none;        
+    } 
+    &:active {
+        background: #CFAF91;
+        outline:none;        
+    }
+    &:disabled {
+        background: #C1C1C1;
+        outline:none;        
+    }       
 }

@@ -1,81 +1,176 @@
+$transition-duration: .4s;
+
 .header {
   padding-top: 0%;
-  padding-bottom: 0%;
+  padding-bottom:0%;    
   margin-top: 50px;
-  margin-bottom: 60px;
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
+  margin-bottom: 60px;  
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 14px;
   line-height: 19px;
-  text-transform: uppercase;
-}
-
-.header-logo:hover {
-  opacity: .5;     
-}
-
-.header-logo:active {
-  opacity: .2;
-}                                   
-
-.header-nav {
-  margin: 0 auto 0 60px;
-}
-
-.header-list {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-align-items: center;
-      -moz-align-items: center;
-          align-items: center;   
-}
-
-.header-item {
-  margin-right: 20px; 
-}
-
-.header-item:hover {
-  opacity: .5;
-  background: none;
-}
-
-.header-item:active {
-  opacity: .2;
-}
-
-.header-search {
-  margin-right: 20px; 
-}
-
-.header-search:hover {
-  opacity: .5;
-  background: none;
-}
-
-.header-search:active {
-  opacity: .2;
-  background: none;
-}
-
-.header-contacts {
-  font-weight: bold;
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-align-items: center;
-      -moz-align-items: center;
-          align-items: center;
   text-transform: uppercase;    
-  color: #1E0606;
+  &__logo {
+    max-width: 42px;
+    transition: $transition-duration;
+    &:hover {
+      opacity: .5;         
+    } 
+    &:active {
+      opacity: .2;    
+    }         
+  }     
+  &__nav {
+    margin: 0 auto 0 60px;
+  }
+  &__list {    
+  display: flex;    
+  align-items: center;   
+  }
+  &__item {
+    margin-right: 20px;
+    transition: $transition-duration;
+    &:hover {
+      opacity: .5;
+      background: none;      
+    }
+    &:active {
+      opacity: .2;      
+    } 
+  }  
+  &__search {
+    display: flex;    
+    justify-content: center;
+    min-width: 136px;
+  }
+  &__search-btn {
+    display: flex;
+    align-items: center;
+    margin-right: 26px;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: none;
+  }
+  &__contacts {
+    display: flex;    
+    align-items: center;
+    font-weight: bold; 
+    font-size: 14px;
+    line-height: 19px;     
+    text-transform: uppercase;    
+    color: #1E0606;
+    transition: $transition-duration; 
+    &:hover {
+      opacity: .5;        
+    }
+    &:active {
+      opacity: .2;         
+    }
+  } 
 }
 
-.header-contacts:hover {
-  opacity: .5;    
-}
+.header-mobile {
+    position: fixed;
+    background: rgba(125, 151, 218, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;    
+    transform: translateX(-100%);
+    transition: $transition-duration;
+    &__open {
+      display: inline;
+    }
+    &__container {
+      background: #FFFFFF;
+      height: 50%;
+      width: 100%;
+      padding: 25px 132px 82px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }  
+    &__btn {
+      font-size: 14px;
+      line-height: 19px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      color: #1E0606;
+      background: transparent;
+      border: none;
+      @media screen and (max-width: 767px) {
+        display: none;    
+      }
+    }
+    &__close {
+      position: fixed;
+      margin: 0 auto;
+      background: transparent;
+      border: none;
+    }
+    &__logo {
+      max-width: 42px;
+    }
+    &__item {
+      margin-bottom: 20px;    
+    } 
+    &__search {
+      display: flex;    
+      justify-content: center;
+      min-width: 136px;
+    }
+    &__search-btn {
+      display: flex;
+      align-items: center;
+      margin-right: 26px;
+      height: 18px;
+      width: 18px;
+      background-color: transparent;
+      border: none;
+    }
+    &__contacts {
+      display: flex;    
+      align-items: center;
+      font-weight: bold; 
+      font-size: 14px;
+      line-height: 19px;     
+      text-transform: uppercase;    
+      color: #1E0606;
+      transition: $transition-duration; 
+      &:hover {
+        opacity: .5;        
+      }
+      &:active {
+        opacity: .2;         
+      }
+    }       
+  }
 
-.header-contacts:active {
-  opacity: .2;    
+    
+@media screen and (min-width: 768px) {
+  .header-mobile { 
+    display: none;        
+    &__btn {
+      display: none;
+    }
+  }
+}
+  
+@media screen and (max-width: 767px) {
+  .header {  
+    padding-top: 35px;
+    padding-bottom:35px;
+    padding-left: 60px;
+    margin: 0;
+    &__nav {
+      display: none;
+    }
+    &__contacts {
+      display: none;
+    }
+  }
 }

@@ -1,5 +1,7 @@
-.button {
-    background: black;
+$transition-duration: .4s;
+
+@mixin button($size:16px, $line-height:22px, $background:#FFFFFF) {
+    background: $background;
     color: #FFFFFF;
     font-weight: bold;
     font-size: 16px;
@@ -10,21 +12,27 @@
     padding: 9px;
     border: none;
     text-transform: uppercase;
-    display: block;
-    cursor: pointer;    
+    display: block;    
+    cursor: pointer;
+    transition: $transition-duration;    
+    &:hover {
+        background: #C29974;
+        outline:none;
+    }
+    &:focus {
+        background: #C29974;
+        outline:none;        
+    } 
+    &:active {
+        background: #CFAF91;
+        outline:none;       
+    }
+    &:disabled {
+        background: #C1C1C1;
+        outline:none;        
+    }       
 }
 
-.button:hover, .button:focus {
-    background: #C29974;
-    outline:none;
-}
-
-.button:active {
-    background: #CFAF91;
-    outline:none;
-}
-
-.button:disabled {
-    background: #C1C1C1;
-    outline:none;
-}
+.button {
+    @include button();
+  }

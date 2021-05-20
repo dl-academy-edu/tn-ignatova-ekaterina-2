@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Toys</title>
-    <!-- <link rel="stylesheet" href="css/normalize.css"> -->    
-    <link rel="stylesheet" href="toys.css">
-    <link href="/common.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> --> 
+    <link rel="stylesheet" href="/common.css">   
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="preconnect" href="https://fonts.gstatic.com">    
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/static/images/favicon.ico">
@@ -14,7 +15,9 @@
   @@include('header/index.html')
     <main>
         <h1 class="page-title container">Toy for kids</h1>
-        @@include('breadcrumbs/index.html')
+        @@include('breadcrumbs/index.html', {
+            "name-page": "Toys"           
+          })
         <section class="filter-box">
             <h2 class="hidden">Filter</h2>
                 <form action="#" method="POST" class="filter-form">
@@ -93,75 +96,51 @@
                             </div>  
                 </form>
         </section>
-        <section class="products container">
+        <section class="toys container">
             <h3 class="hidden">Toys</h3>
-            <ul class="outline products-list">
-                <li class="products-item">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">
-                            <img class="products-img" src="../../static/images/toy1.jpg" alt="" width="380" height="385">
-                        </a>
-                        <a href="#">
-                            <p class="title-link">SHARKY BEAN BAG CHAIR COVER</p>
-                        </a>
-                        <p class="price-link">$60.00 USD</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy2.jpg" alt="" width="380" height="385">
-                        </a>
-                        <a href="#">
-                            <p class="title-link">BRASS DECO FRAMES</p>
-                        </a>
-                        <p class="price-link">$66.00 USD</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy3.jpg" alt="" width="380" height="385">
-                        </a>
-                        <a href="#">
-                            <p class="title-link">CIBO FULL APRON</p>
-                        </a>
-                        <p class="price-link">$60.00 USD</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy4.jpg" alt="" width="380" height="385">
-                        </a>
-                        <a href="#">
-                            <p class="title-link">GATCHA GATCHA GUMBALL MACHINE</p>
-                        </a>
-                        <p class="price-link">$56.00 USD</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">
-                        <img src="../../static/images/toy5.jpg" alt="" width="380" height="385">
-                    </a>
-                    <a href="#">
-                        <p class="title-link">CHRISTMAS ADVENT SCENTED CANDLE</p>
-                    </a>
-                    <p class="price-link">$29.00 USD</p>
-                    </div>
-                   </li>
-                <li class="products-item">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">
-                            <img src="../../static/images/toy6.jpg" alt="" width="380" height="382">
-                        </a>
-                        <a href="#">
-                            <p class="title-link">TANGLE SPINNING TEA LIGHT</p>
-                        </a>
-                        <p class="price-link">$56.00 USD</p>
-                    </div>
-                </li>
+            <ul class="outline toys__list">                
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy1.jpg",
+                    "alt": "SHARKY BEAN BAG CHAIR COVER",
+                    "title": "SHARKY BEAN BAG CHAIR COVER", 
+                    "price": "$60.00 USD"                 
+                  })                 
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy2.jpg",
+                    "alt": "BRASS DECO FRAMES",
+                    "title": "BRASS DECO FRAMES", 
+                    "price": "$66.00 USD"                  
+                  })                
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy3.jpg",
+                    "alt": "CIBO FULL APRON",
+                    "title": "CIBO FULL APRON", 
+                    "price": "$60.00 USD"                  
+                  })                
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy4.jpg",
+                    "alt": "GATCHA GATCHA GUMBALL MACHINE",
+                    "title": "GATCHA GATCHA GUMBALL MACHINE", 
+                    "price": "$6.00 USD"                  
+                  })                
+                   @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy5.jpg",
+                    "alt": "CHRISTMAS ADVENT SCENTED CANDLE",
+                    "title": "CHRISTMAS ADVENT SCENTED CANDLE", 
+                    "price": "$29.00 USD"                  
+                  })                
+                @@include('toys-card/index.html', {
+                    "href": "#",                    
+                    "img": "../../static/images/toy6.jpg",
+                    "alt": "TANGLE SPINNING TEA LIGHT",
+                    "title": "TANGLE SPINNING TEA LIGHT", 
+                    "price": "$56.00 USD"                  
+                  })
             </ul>
             @@include('pagination/index.html')
         </section>       

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Catalog</title>
-    <!-- <link rel="stylesheet" href="css/normalize.css"> -->    
-    <link rel="stylesheet" href="catalog.css">
-    <link href="/common.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="/common.css">    
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="preconnect" href="https://fonts.gstatic.com">    
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/static/images/favicon.ico">
@@ -14,61 +15,60 @@
   @@include('header/index.html')
     <main class="container">
         <h1 class="page-title catalog-title">Category Products</h1>
-        @@include('breadcrumbs/index.html')
+        @@include('breadcrumbs/index.html', {
+            "name-page": "Catalog"           
+          })
         <section class="products">
-            <h2 class="hidden">Products</h2>
-            <ul class="outline products-list">                
-                <li class="products-item first-product">
-                    <div class="container-link" tabindex="0">
-                    <a href="#">
-                    <p class="title-link">APPAREL KIDS</p>
-                    </a>
-                </div>
-                </li>
-                <li class="products-item second-product">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">                           
-                        <p class="title-link">HOLIDAY SHOP</p>
-                        </a>
-                    </div>                    
-                </li>
-                <li class="products-item third-product">
-                    <div class="container-link" tabindex="0">
-                       <a href="#">                        
-                        <p class="title-link">TOYS</p>
-                        </a>  
-                    </div>
-                </li>
-                <li class="products-item fourth-product">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">                            
-                        <p class="title-link">ACCESSORIES</p>
-                        </a>
-                    </div>
-                </li>
-                <li class="products-item fifth-product">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">                            
-                        <p class="title-link">SALE</p>
-                        </a>
-                    </div>
-                </li>
-                <li class="products-item sixth-product">
-                    <div class="container-link" tabindex="0">
-                        <a href="#">                        
-                        <p class="title-link">APPAREL ADULTS</p>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="description">
-            <h2 class="page-title-two description-title">Product Description</h2>
-            <p class="description-item">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
-            <p class="description-item">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
-            <p class="description-item">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
-        </section>
-    </main>
-    @@include('footer/index.html')
+            <h2 class="products-title hidden">Products</h2>
+            <ul class="outline products__list">                 
+                    @@include('catalog-card/index.html', {
+                        "href": "#",                        
+                        "img": "../../static/images/prod1.jpg",
+                        "alt": " ",
+                        "title": "APPAREL KIDS"                    
+                      })                    
+                    @@include('catalog-card/index.html', {
+                        "href": "#",                        
+                        "img": "../../static/images/prod2.jpg",
+                        "alt": " ",
+                        "title": "HOLIDAY SHOP"                    
+                      })                    
+                    @@include('catalog-card/index.html', {
+                        "href": "#",                        
+                        "img": "../../static/images/prod3.jpg",
+                        "alt": " ",
+                        "title": "TOYS"              
+                      })                   
+                    @@include('catalog-card/index.html', {
+                        "href": "#",                        
+                        "img": "../../static/images/prod4.jpg",
+                        "alt": " ",
+                        "title": "ACCESSORIES"                    
+                      })             
+                    @@include('catalog-card/index.html', {
+                        "href": "#",                        
+                        "img": "../../static/images/prod5.jpg",
+                        "alt": " ",
+                        "title": "SALE"                    
+                    })          
+        @@include('catalog-card/index.html', {
+            "href": "#",            
+            "img": "../../static/images/prod6.jpg",
+            "alt": " ",
+            "title": "APPAREL ADULTS"                    
+          })        
+    </ul>            
+    </section>
+    <section class="description">
+        <h2 class="page-title-two description__title">Product Description</h2>
+        <p class="description__item">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
+        <p class="description__item">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+        <p class="description__item">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+    </section>
+</main>
+@@include('footer/index.html')
 </body>
 </html>
+                
+                
+               

@@ -1,49 +1,43 @@
+$transition-duration: .4s;
+
 .pagination {
     font-family: "Montserrat", Arial, sans-serif; ;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 25px;
     text-transform: uppercase;
     padding-top: 0%;
     padding-bottom: 0%;
-    margin-top: 35px;    
-    -webkit-display: flex;
-        -moz-display: flex;
-            display: flex;
-    -webkit-align-items: center;
-        -moz-align-items: center;
-            align-items: center;
-    font-size: 14px;
-    line-height: 19px;    
+    margin-top: 35px;     
+    display: flex;    
+    align-items: center;       
     outline: none;
+    @media screen and (max-width: 767px) {          
+        font-size: 14px;
+        line-height: 17px;
+}
+    &__nav {
+        margin: 0 auto;
+    }
+    &__list {        
+        display: flex;        
+        align-items: center;
+    }
+    &__item {
+        margin-right: 35px;
+        list-style-type: none;
+        margin-left: 29px;
+        transition: $transition-duration; 
+        &:hover {
+            fill:#AAAAAA;
+            cursor: pointer;            
+        }
+    }
+    &__item_active {
+        fill: #C29974;
+        transition: $transition-duration;
+    }
 }
 
-.pagination-nav {
-    margin: 0 auto;
-}
 
-.pagination-list {
-    -webkit-display: flex;
-        -moz-display: flex;
-            display: flex;
-    -webkit-align-items: center;
-        -moz-align-items: center;
-            align-items: center;
-}
-
-.pagination-item {
-    margin-right: 35px;
-    list-style-type: none;
-    margin-left: 29px;    
-}
-
-.page-active {
-    fill: #C29974;
-}
-
-a:hover svg path {
-    fill:#AAAAAA;
-    cursor: pointer;
-    text-decoration: none;
-}
