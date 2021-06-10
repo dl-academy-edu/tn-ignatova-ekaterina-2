@@ -9,16 +9,17 @@ $transition-duration: .4s;
     background: rgba(125, 151, 218, 0.2);
     margin-bottom: 54px;
 }
-
+// Сократить запись медиа
 .filter-form {    
     display: flex;    
-    justify-content: space-between;    
+    justify-content: space-between;
+    flex-wrap: wrap;    
     max-width: 1095px;
     width: 100%;
     padding-top: 42px;
     padding-left: 73px;
-    padding-bottom: 20px; 
-    @media screen and (max-width: 768px) {
+    padding-bottom: 20px;     
+    @media screen and (max-width: 767px) {
         flex-wrap: wrap;
     }     
 }
@@ -33,7 +34,11 @@ $transition-duration: .4s;
     font-size: 16px;
     line-height: 22px;    
     color: #1E0606;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    @media screen and (max-width: 767px) {
         font-size: 14px;
         line-height: 19px;
     }
@@ -188,7 +193,7 @@ $transition-duration: .4s;
 .filter-item button {
     margin-top: 37px;
     width: 95px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         margin-right: 20px;
     }
 } 

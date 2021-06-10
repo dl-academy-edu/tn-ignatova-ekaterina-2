@@ -6,6 +6,16 @@ $transition-duration: .4s;
     background: #E5EAF8;
     margin: 0 auto 60px;
     padding: 42px 40px;
+    @media screen and (max-width: 767px) {
+        order: 2;
+        max-width: 648px; 
+        padding: 42px 20px;
+    }    
+    @media screen and (max-width: 767px) {
+        order: 2;
+        max-width: 335px; 
+        padding: 42px 20px;
+    }
 }
 
 .contact-form fieldset{
@@ -27,11 +37,20 @@ $transition-duration: .4s;
 
 .contact-wrapper {    
     display: flex;  
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+    }
 }
 
 div .form-name {    
     width: 600px;
     bottom: 50px;
+    @media screen and (max-width: 1024px) {
+        width: 258px;        
+    }
+    @media screen and (max-width: 767px) {
+        width: 285px;        
+    }
 }
 
 .contact-block {     
@@ -61,6 +80,12 @@ div .form-name {
     width: 600px;
     height: auto;
     resize: none;
+    @media screen and (max-width: 1024px) {
+        width: 258px;        
+    }
+    @media screen and (max-width: 767px) {
+        width: 285px;        
+    }
 }
 
 .contact-form input:focus,
@@ -74,7 +99,13 @@ div .form-name {
 }
 
 .checkbox-agreement {
-    width: 542px;        
+    width: 542px;  
+    @media screen and (max-width: 1024px) {         
+        width: 258px;        
+    } 
+    @media screen and (max-width: 767px) {         
+        width: 285px;        
+    }      
 }
 
 .checkbox-agreement label {

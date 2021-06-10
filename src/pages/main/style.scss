@@ -3,20 +3,23 @@ $transition-duration: .4s;
 // не работает
 .main-page .header {
   margin-bottom: 125px;  
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1024px) {
     margin-bottom: 0;
   }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+  }  
 }
 
 /* slider */
 
 .slider-box {
-  background-image: url("images/slider1.jpg");
+  position: relative;
   background: #EEE4DB;
   margin-bottom: 97px;
   @media screen and (max-width: 767px) {
    padding: 0;     
-  }
+  }  
 }
 
 .slider-content {  
@@ -55,6 +58,10 @@ $transition-duration: .4s;
     margin-top: 34px;
     margin-bottom: -3px;
     margin-left: -10px;
+    @media screen and (max-width: 767px)  {
+      font-size: 36px;
+      line-height: 110%;
+    }   
   }  
   &__item {
     font-family: "Crimson Text", Arial, sans-serif;
@@ -72,7 +79,7 @@ $transition-duration: .4s;
       width: 100%;        
       font-size: 14px;
       line-height: 19px;
-    }
+    }    
   }  
   &__img {
     width: 635px;
@@ -81,7 +88,10 @@ $transition-duration: .4s;
     margin-right: 99px;    
   }  
   &__info {
-    display: flex;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
@@ -90,6 +100,70 @@ $transition-duration: .4s;
     color: #FFFFFF;
     padding: 11px;    
     margin: 0;
+  }
+}
+
+// slider media
+
+@media screen and (max-width: 1024px) {
+  .slider-content {  
+    width: 648px;
+    height: 411px;
+  }
+}
+
+// Исправить
+@media screen and (max-width: 1024px) {  
+  .slider {
+    margin-top: 30px;
+    margin-left: 20px;     
+  &__img {  
+      position: absolute;
+      display: block;  
+      width: 385px;
+      height: 286px;
+      left: 179px;
+      bottom: 37px;
+    }      
+  &__info {     
+      width:100%;
+      padding: 11px 20px;            
+    } 
+  }
+}
+
+// Исправить
+@media screen and (max-width: 767px) {
+  .toggle {    
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    }        
+}
+
+@media screen and (max-width: 767px) {
+  .slider-content {  
+    width: 375px;
+    height: 448px;
+  }
+}
+
+@media screen and (max-width: 767px) {  
+  .slider {
+    margin-top: 30px;
+    margin-left: 20px;     
+  &__img {  
+      position: absolute;
+      display: block;  
+      width: 292px;
+      height: 226px;
+      left: 92px;
+      bottom: 54px;
+    }      
+  &__info {     
+      width:100%;
+      padding: 11px 20px;            
+    } 
   }
 }
 
@@ -127,19 +201,6 @@ $transition-duration: .4s;
 
 /* delivery */
 
-@media screen and (max-width: 767px) {
-  .delivery {  
-    &__img {
-      order: 1;
-      margin-bottom: 40px;
-      
-    }  
-    &__info {  
-      order: 2;
-    }     
-  }
-}
-
 .delivery {  
   display: flex;  
   justify-content: space-between;    
@@ -171,10 +232,14 @@ $transition-duration: .4s;
   }   
   &__title {
     margin: 3px 0px 21px -40px;
+    @media screen and (max-width: 1024px) {
+      font-size: 36x;
+      line-height: 44px;     
+    }
     @media screen and (max-width: 767px) {
       font-size: 24px;
       line-height: 29px;     
-    }
+    }    
   }   
   &__tabs {
     display: flex;   
@@ -189,10 +254,15 @@ $transition-duration: .4s;
     margin: 0;  
     height: 55px;
     cursor: pointer;
+    @media screen and (max-width: 1024px) {
+      font-size: 24px;
+      line-height: 30px;     
+    }
     @media screen and (max-width: 767px) {
       font-size: 24px;
       line-height: 30px;     
     }
+    
     &:hover:not(.checked) {
       opacity: .5;
       transition: $transition-duration;       
@@ -233,18 +303,14 @@ $transition-duration: .4s;
   }
 }
 
-/* Brands */
-
-.brands {
-  margin-bottom: 108px;     
-}
-
 /* About */
 
 .about { 
   display: flex;    
   margin-bottom: 143px;
   flex-wrap: wrap; 
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 125px;  } 
   @media screen and (max-width: 767px) {
     width: 100%;
     padding: 0;
@@ -254,6 +320,9 @@ $transition-duration: .4s;
     background: #E1F0F7;    
     padding: 10px 30px 35px;
     margin-right: 57px;
+    @media screen and (max-width: 1024px) {
+      max-width: 314px;    
+    }
     @media screen and (max-width: 767px) {
       order: 1;
       width: 100%;      
@@ -264,6 +333,11 @@ $transition-duration: .4s;
   &__title {
     margin-top: -36px;
     margin-bottom: -12px;
+    @media screen and (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 37px;
+      margin-top: -26px;
+    }  
     @media screen and (max-width: 767px) {
       font-size: 24px;
       line-height: 29px;
@@ -277,6 +351,10 @@ $transition-duration: .4s;
     font-size: 26px;
     line-height: 32px;
     margin-bottom: -7px;
+    @media screen and (max-width: 1024px) {
+      font-size: 26px;
+      line-height: 32px;
+    }
     @media screen and (max-width: 767px) {
       font-size: 24px;
       line-height: 30px;
@@ -303,6 +381,9 @@ $transition-duration: .4s;
   display: block;
   max-width: 543px;
   background: #E1F0F7;
+  @media screen and (max-width: 1024px) {
+    max-width: 314px;    
+  }
   @media screen and (max-width: 767px) {
     order: 2; 
     width: 100%;                
@@ -316,6 +397,11 @@ $transition-duration: .4s;
     margin-top: -26px;
     margin-left: -3px;
     margin-bottom: 22px;
+    @media screen and (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 37px;
+      margin-top: -26px;
+    }
     @media screen and (max-width: 767px) {
       font-size: 24px;
       line-height: 29px;
@@ -323,54 +409,26 @@ $transition-duration: .4s;
     } 
   }  
   &__item {
-    margin-bottom: 24px;    
-  }       
+    margin-bottom: 20px;  
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 24px; 
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 23px;  
+  } 
+} 
   &__map {
     position: absolute;
     display: block;
     background-position: center bottom;
+    width: 90%;
+    height: 196px;
     border: none; 
-    width: 483px; 
-    height: 196px;     
-  } 
-}  
-
-// Media
-
-// slider
-
-@media screen and (max-width: 767px) {
-  .toggle {    
-      display: none;
-    }        
-}
-
-@media screen and (max-width: 767px) {
-  .slider-content {  
-    width: 375px;
-    height: 448px;
-  }
+    overflow: hidden; 
+  }    
 }
 
 
-@media screen and (max-width: 767px) {  
-  .slider {
-    position: relative;
-    display: block;
-    margin-top: 30px;
-    margin-left: 20px;     
-  &__img {  
-      position: absolute;
-      display: block;  
-      width: 292px;
-      height: 226px;
-      left: 179px;
-      bottom: 185px;
-    }      
-  &__info {     
-      width:100%;
-      padding: 11px 20px;            
-    } 
-  }
-}
+
+
 

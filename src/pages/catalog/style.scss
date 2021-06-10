@@ -8,27 +8,28 @@
     margin-bottom: -2px;
 }
 
-/* Products */
+// /* Products */
 
-.products {
-    margin-bottom: 43px;
-    margin-top: -11px;  
-  }
+// .products {
+//     margin-bottom: 43px;
+//     margin-top: -11px;  
+//   }
 
-  .products-item {
-    width: 25%;
-    margin: 10px;
-    margin-right: 20px;
-    margin-bottom: 23px;
-    overflow: hidden;
-}
+//   .products-item {
+//     width: 25%;
+//     margin: 10px;
+//     margin-right: 20px;
+//     margin-bottom: 23px;
+//     overflow: hidden;
+// }
 
-.products-item:nth-child(4) {
-    margin-left: 200px;
-}
+// .products-item:nth-child(4) {
+//     margin-left: 200px;
+// }
 
 /* description */
 
+// Исправить
 .description {
     max-width: 680px;
     width: 100%;
@@ -50,4 +51,107 @@
                 line-height: 22px;
         }
 	}
+}
+
+$numberColumns: 12;
+$gap: 20px;
+
+$size-xl: 1400px;
+$size-lg: 1024px;
+$size-md: 768px;
+$size-sm: 375px;
+
+@mixin media-interval($min, $max) {
+  @if $max == 0 {
+    $max: 9999px;
+  }
+  
+  @media (min-width: ($min + 1px)) and (max-width: $max) {
+    @content;
+  }
+}
+@mixin create-grid($type-width, $media-size) {
+  @if media-size == "full" {
+    .container {
+      max-width: 100%;
+    }
+  } @else {
+    .container {
+      max-width: $media-size - $gap*2;
+    }
+  }
+  @for $i from 1 through $numberColumns {
+    .col-#{$type-width}-#{$i} {
+      width: (100% / $numberColumns) * $i;
+    }
+  
+    .skip-#{$type-width}-#{$i} {
+      margin-left: (100% / $numberColumns) * $i;
+    }
+    .add-#{$type-width}-#{$i} {
+      margin-right: (100% / $numberColumns) * $i;
+    }
+  }
+}
+
+@include media-interval($size-xl, 0) {
+  @include create-grid(xl, $size-xl);
+}
+@include media-interval($size-lg, $size-xl) {
+  @include create-grid(lg, $size-lg);
+}
+@include media-interval($size-md, $size-lg) {
+  @include create-grid(md, $size-md);
+}
+@include media-interval($size-sm, $size-md) {
+  @include create-grid(sm, $size-sm);
+}
+@include media-interval(0, $size-sm) {
+  @include create-grid(xs, "full");
+}
+
+.container {
+  padding-left: $gap;
+  padding-right: $gap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+.row {
+  display: flex;
+  margin: (-$gap) (-$gap/2) 0 (-$gap/2);
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+li[class*="col"] {
+    position: relative;
+    box-sizing: border-box;
+    padding: $gap $gap/2 0 $gap/2;
+
+
+.row {
+  .content {
+    padding: 15px;
+    box-sizing: border-box;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }   
+ }
 }

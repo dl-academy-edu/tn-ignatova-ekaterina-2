@@ -1,5 +1,5 @@
 $transition-duration: .4s;
-
+// Исправить
 .toys {
     margin-bottom: 53px;
     &__list {    
@@ -7,6 +7,9 @@ $transition-duration: .4s;
         justify-content: space-between;    
         flex-wrap: wrap;
         margin: 0 -10px -4px;  
+        @media screen and (max-width: 1024px) {
+            margin: 0 -13px -7px;     
+          }
         @media screen and (max-width: 767px) {
             margin: 0 -13px -7px;     
           }                   
@@ -15,7 +18,10 @@ $transition-duration: .4s;
         width: 380px;
         margin-right: 20px;
         margin-bottom: 22px;
-        overflow: hidden;  
+        overflow: hidden;
+        @media screen and (max-width: 1024px) {
+            width: 380px;     
+          }   
         @media screen and (max-width: 767px) {
             width: 160px;     
           }                                 
@@ -79,6 +85,10 @@ $transition-duration: .4s;
     &__container-img {
         width: 380px;
         height: 385px;
+        @media screen and (max-width:1024px) {
+            width: 380px;
+            height: 385px;     
+          }
         @media screen and (max-width: 767px) {
             width: 159px;
             height: 167px;     

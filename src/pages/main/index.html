@@ -50,39 +50,50 @@
                 <p class="slider__item">Designed in Slovenia</p>
                 @@include('button/index.html', {
                   "text": "EXPLORE NOW",
-                  "class": "slider__btn slider__js"
+                  "class": "slider-btn slider-js"
                 })
-            </div>   
-                <img class="slider__img" src="../../static/images/slider1.png" alt="">
-            </div>
-            <div>
-                <p class="slider__info">Free (continental) USA shipping on all orders of $100 USD or more!</p>  
-            </div>                               
+            </div> 
+            <div class="slider__img-wrapper">
+            <picture>
+                <source srcset="../../static/images/slider/slider-mobile.png, ../../static/images/slider/slider-mobile@2x.png 2x" media="max-width:767px;">                    
+
+                <source srcset="../../static/images/slider/slider-tablet.png, ../../static/images/slider/slider-tablet@2x.png 2x" media="max-width:1023px;">
+
+                <source srcset="../../static/images/slider/slider-desktop@2x.png 2x">
+                <img class="slider__img"  src="../../static/images/slider/slider-desktop.png" alt="">
+            </picture> 
+            </div>                 
+        </div>
+            <p class="slider__info">Free (continental) USA shipping on all orders of $100 USD or more!</p>                                           
         </section>
         <section class="products container">
                 <h2 class="page-title-two products__title">Category Products</h2>
-                <ul class="outline products__list">                    
-                    @@include('catalog-card/index.html', {
-                        "href": "#",                        
-                        "img": "../../static/images/prod1.jpg",
+                <ul class="outline products__list-main">                    
+                    @@include('catalog-card/index.html', {                        
+                        "href": "#",                                                
+                        "img": "../../static/images/products/prod1.png",
+                        "img2": "../../static/images/products/prod1@2x.png 2x",
                         "alt": " ",
                         "title": "APPAREL KIDS"                    
                       })                    
-                    @@include('catalog-card/index.html', {
+                    @@include('catalog-card/index.html', {                        
                         "href": "#",                        
-                        "img": "../../static/images/prod2.jpg",
+                        "img": "../../static/images/products/prod2.png",
+                        "img2": "../../static/images/products/prod2@2x.png 2x",
                         "alt": " ",
                         "title": "HOLIDAY SHOP"                    
                       })                    
-                    @@include('catalog-card/index.html', {
+                    @@include('catalog-card/index.html', {                        
                         "href": "pages/toys",                        
-                        "img": "../../static/images/prod3.jpg",
+                        "img": "../../static/images/products/prod3.png",
+                        "img2": "../../static/images/products/prod3@2x.png 2x",
                         "alt": " ",
                         "title": "TOYS"                    
                       })                    
-                    @@include('catalog-card/index.html', {
+                    @@include('catalog-card/index.html', {                        
                         "href": "#",                        
-                        "img": "../../static/images/prod4.jpg",
+                        "img": "../../static/images/products/prod4.png",
+                        "img2": "../../static/images/products/prod4@2x.png 2x",
                         "alt": " ",
                         "title": "ACCESSORIES"                    
                       })    
@@ -108,10 +119,12 @@
         <section class="delivery container">
             <div class="delivery__img-wrap">
                 <picture>
-                    <source srcset="../../static/images/delivery-mobile.jpg, ../../static/images/delivery-mobile@2x.jpg 2x" media="max-width:767px;">                    
+                    <source srcset="../../static/images/delivery/delivery-mobile.png, ../../static/images/delivery/delivery-mobile@2x.png 2x" media="max-width:767px;">  
+                    
+                    <source srcset="../../static/images/delivery/delivery-tablet.png, ../../static/images/delivery/delivery-tablet@2x.png 2x" media="max-width:1023px;">
 
-                    <source srcset="../../static/images/delivery.jpg, ../../static/images/delivery@2x.jpg 2x" media="min-width:1023px;">
-                    <img class="delivery__img"  src="../../static/images/delivery.jpg" alt="">
+                    <source srcset="../../static/images/delivery/delivery-desktop@2x.png 2x">
+                    <img class="delivery__img"  src="../../static/images/delivery/delivery-desktop.png" alt="">
                 </picture>               
             </div>            
             <div class="delivery__info" tabindex="0">
@@ -168,20 +181,16 @@
                     <h2 class="page-title-two contacts__title">Contacts</h2>
                     <p class="contacts__item">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.                     
                     </p>
-                    <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae975d5d0230c97fc17fe4170bcd64da9bd5d640035324b55dcba715d358a7b22&amp;source=constructor"></iframe>
-            </div>
+                    <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.53557798247!2d49.2881363153922!3d53.51249116995513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687981eb77e79b%3A0xc6236db15e1d074e!2z0L_RgC4g0KHRgtC10L_QsNC90LAg0KDQsNC30LjQvdCwLCA0NCwg0KLQvtC70YzRj9GC0YLQuCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTAyNw!5e0!3m2!1sru!2sru!4v1622835211436!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+              </div>
             </div>          
     </section>
+
+    
+
     </main>
-    @@include('footer/index.html')
-    <div class="popup__overlay" tabindex="0"></div>
-    <div class="popup__form" tabindex="0">
-        <h2 class="hidden">Modal window</h2>
-        <button class="popup__close"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.21902 14.6113C1.70029 15.1295 0.893368 15.1295 0.374636 14.6113C0.11527 14.3522 -6.13512e-07 14.0355 -5.9841e-07 13.69C-5.83308e-07 13.3445 0.11527 13.0278 0.374636 12.7687L5.64841 7.5L0.374637 2.23127C0.115271 1.97215 -7.23629e-08 1.65547 -5.72611e-08 1.30998C-4.21593e-08 0.964491 0.115271 0.647806 0.374637 0.388689C0.893369 -0.129545 1.70029 -0.129545 2.21902 0.388689L7.4928 5.65738L12.7666 0.38869C13.2853 -0.129545 14.0922 -0.129545 14.611 0.38869C15.1297 0.906924 15.1297 1.71304 14.611 2.23127L9.33718 7.5L14.611 12.7687C15.1297 13.287 15.1297 14.0931 14.611 14.6113C14.0922 15.1295 13.2853 15.1295 12.7666 14.6113L7.4928 9.34258L2.21902 14.6113Z" fill="white"/>
-            </svg>
-        </button>
-    @@include('form/index.html')
-    <script src="script.js"></script>
+    @@include('footer/index.html')    
+    @@include('popup/index.html')
+    <script src="/script.js"></script>
 </body>
 </html>

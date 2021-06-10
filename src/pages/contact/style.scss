@@ -1,5 +1,6 @@
 .contacts-box {    
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 3px;
 } 
 
@@ -13,12 +14,27 @@
     margin-top: -3px;
 }
 
+// Сократить
 .support {
     padding-top: 0;
     padding-left: 120px;
+    @media screen and (max-width: 1024px) {
+        order: 1; 
+        padding-left: 0;    
+    }
+    @media screen and (max-width: 767px) {
+        order: 1; 
+        padding-left: 0;    
+    }
     &__item {
         margin-top: 0;
         margin-bottom: 20px;
+        @media screen and (max-width: 1024px) {
+            text-align: center;  
+        }
+        @media screen and (max-width: 767px) {
+            text-align: center;  
+        }
     }    
     &__item_active {
         font-family: "Montserrat", Arial, sans-serif;
@@ -28,5 +44,11 @@
         line-height: 34px;
         text-transform: uppercase;
         color: #C29974;
+        @media screen and (max-width: 1024px) {
+            font-size: 26px;  
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 24px;  
+        }
     }
 }

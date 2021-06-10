@@ -3,15 +3,28 @@ $transition-duration: .4s;
 .products {
   &__title {
     margin-bottom: 20px;
-  }  
-  &__list {    
-    display: flex;    
-    justify-content: space-between;   
+  } 
+  &__list-main {    
+    display: flex;      
+    justify-content: space-between;
     margin: 0 -10px -20px;
+    @media screen and (max-width: 1024px) {
+      width: 1093px;     
+    }
     @media screen and (max-width: 767px) {
       width: 1050px;     
     }
   } 
+  &__list {    
+    display: flex;      
+    flex-wrap: wrap;     
+    @media screen and (max-width: 1024px) {
+      width: 1093px;     
+    }
+    @media screen and (max-width: 767px) {
+      width: 1050px;     
+    }
+  }    
   &__item {
     width: 25%;
     margin: 10px;
@@ -35,7 +48,13 @@ $transition-duration: .4s;
     }  
     &:nth-child(4) {
       background: #D5D4E1;
-    }      
+    }    
+    &:nth-child(5) {
+      background: #F3D0DB;
+    } 
+    &:nth-child(6) {
+      background: #E5EAF8;
+    }   
   }   
   &__title-link {
     position: absolute;
@@ -54,4 +73,3 @@ $transition-duration: .4s;
     text-decoration: underline;              
   }
 }
-
