@@ -37,6 +37,27 @@ $transition-duration: .4s;
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .posts {       
+        &__item {
+            max-width: 314px;
+            margin-bottom: 10px;                
+        }    
+        &__date {            
+            margin-bottom: 5px;
+        }    
+        &__subtitle {            
+            font-size: 24px;
+            line-height: 31px;
+            margin-bottom: 10px;               
+        }       
+        &__info {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+}
+
 @media screen and (max-width: 767px) {
     .posts {       
         &__item {
