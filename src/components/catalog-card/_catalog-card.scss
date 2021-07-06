@@ -31,6 +31,24 @@ $transition-duration: .4s;
     margin-right: 20px;
     margin-bottom: 30px;
     overflow: hidden;
+    &:nth-child(1) .products_img {
+      background: #DBE4DB;
+    } 
+    &:nth-child(2) .products_img {
+      background: #EADDD3;
+    } 
+    &:nth-child(3) .products_img {
+      background: #F8F2DA;
+    }  
+    &:nth-child(4) .products_img {
+      background: #D5D4E1;
+    }    
+    &:nth-child(5) .products_img {
+      background: #F3D0DB;
+    } 
+    &:nth-child(6) .products_img {
+      background: #E5EAF8;
+    }   
   }  
   &__container-link {
     position: relative;
