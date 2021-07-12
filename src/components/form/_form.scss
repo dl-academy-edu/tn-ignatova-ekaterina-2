@@ -6,7 +6,7 @@ $transition-duration: .4s;
     background: #E5EAF8;
     margin: 0 auto 60px;
     padding: 42px 40px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1024px) {
         order: 2;
         max-width: 648px; 
         padding: 42px 20px;
